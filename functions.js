@@ -109,8 +109,12 @@ Object.grabKeys = function(Object) {
 };
 
 
-console.log(Object.grabKeys(object1));
 // VALUES //
-Object.grabValues = function() {
-
+Object.grabValues = function(Object) {
+    let arr = [];
+    for(element in Object){
+        arr.push(Object[element]);
+    }
+    return arr;
 };
+
