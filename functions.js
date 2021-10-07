@@ -29,8 +29,6 @@ Array.prototype.myFilter = function(callbackFn) {
     return passed;
 };
 
-
-
 // SOME //
 Array.prototype.mySome = function() {
 
@@ -52,8 +50,21 @@ Array.prototype.myIncludes = function() {
 };
 
 // INDEXOF //
-Array.prototype.myIndexOf = function() {
-
+Array.prototype.myIndexOf = function(...args) {
+    if(args[1] === undefined){
+        for(let i = 0; i < this.length; i++){
+            if(this[i] === args[0]){
+                return i;
+            }
+        }
+    } else {
+        for(let i = args[1]; i < this.length; i++){
+            if(this[i] === args[0]){
+                return i;
+            }
+        }
+    }
+    return -1;
 };
 
 // PUSH //
