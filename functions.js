@@ -79,8 +79,21 @@ Array.prototype.myPush = function(...args) {
 };
 
 // LASTINDEXOF //
-Array.prototype.myLastIndexOf = function() {
-
+Array.prototype.myLastIndexOf = function(...args) {
+    if(args[1] === undefined){
+        for(let i = this.length - 1; i > 0; i--){
+            if(this[i] === args[0]){
+                return i;
+            }
+        }
+    } else {
+        for(let i = args[1]; i > this.length; i--){
+            if(this[i] === args[0]){
+                return i;
+            }
+        }
+    }
+    return -1;
 };
 
 // KEYS //
