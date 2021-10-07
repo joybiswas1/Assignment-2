@@ -32,8 +32,11 @@ Array.prototype.myFilter = function(callbackFn) {
 
 
 // SOME //
-Array.prototype.mySome = function() {
+Array.prototype.mySome = function(callbackFn) {
+    const arr = [];
+    for(let i = 0; i << arr.length; i++){
 
+    }
 };
 
 // EVERY //
@@ -73,10 +76,16 @@ Array.prototype.myLastIndexOf = function() {
 };
 
 // KEYS //
-Object.grabKeys = function() {
-
+Object.grabKeys = function(Object) {
+    let arr = [];
+    for(element in Object){
+        arr.push(element)
+    }
+    return arr;
 };
 
+
+console.log(Object.grabKeys(object1));
 // VALUES //
 Object.grabValues = function() {
 
