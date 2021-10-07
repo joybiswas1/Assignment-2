@@ -17,9 +17,19 @@ Array.prototype.myMap = function(callbackFn) {
 };
 
 // FILTER //
-Array.prototype.myFilter = function() {
 
+Array.prototype.myFilter = function(callbackFn) {
+    let passed = [];
+    for(let i = 0; i < this.length; i++){
+        const result = callbackFn(this[i], i, this);
+        if(result){
+            passed.push(this[i]);
+        }
+    }
+    return passed;
 };
+
+
 
 // SOME //
 Array.prototype.mySome = function() {
