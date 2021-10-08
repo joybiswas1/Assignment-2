@@ -50,8 +50,25 @@ Array.prototype.myEvery = function(callbackFn) {
 };
 
 // REDUCE //
-Array.prototype.myReduce = function() {
-
+Array.prototype.myReduce = function(callbackFn, initialValue) {
+    if(initialValue === undefined){
+        let sum = 0;
+        for(let i = 0; i < this.length; i++){
+            let x = 0;
+            x += callbackFn(x,this[i]);
+            sum += x;
+    
+        }
+    return sum;
+    }  else{
+        let sum = initialValue;
+        for(let i = 0; i < this.length; i++){
+            let x = 0;
+            x += callbackFn(x,this[i]);
+            sum += x;
+    }
+    return sum;
+}
 };
 
 // INCLUDES //
