@@ -31,10 +31,12 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-    const arr = [];
-    for(let i = 0; i << arr.length; i++){
-
+    for(let i = 0; i < this.length; i++){
+        if(callbackFn(this[i], i, this)){
+            return true;
+        }
     }
+    return false;
 };
 
 // EVERY //
