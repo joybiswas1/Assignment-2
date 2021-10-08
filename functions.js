@@ -40,8 +40,13 @@ Array.prototype.mySome = function(callbackFn) {
 };
 
 // EVERY //
-Array.prototype.myEvery = function() {
-
+Array.prototype.myEvery = function(callbackFn) {
+    for(let i = 0; i < this.length; i++){
+        if(!callbackFn(this[i], i, this)){
+            return false;
+        }
+    }
+    return true;
 };
 
 // REDUCE //
@@ -119,4 +124,3 @@ Object.grabValues = function(Object) {
     }
     return arr;
 };
-
