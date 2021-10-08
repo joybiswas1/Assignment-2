@@ -8,3 +8,7 @@ Mashroor Ali - MashroorAli
   <br>
 Joy Biswas - joybiswas1
 </p>
+
+<p>
+The goal of this assignment is to get comfortable with JS code and practice more using git. 
+</p>
