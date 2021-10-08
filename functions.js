@@ -55,8 +55,21 @@ Array.prototype.myReduce = function() {
 };
 
 // INCLUDES //
-Array.prototype.myIncludes = function() {
-
+Array.prototype.myIncludes = function(...args) {
+    if(args[1] === undefined){
+        for(let i = 0; i < this.length; i++){
+            if(this[i] === args[0]){
+                return true;
+            }
+        }
+    } else {
+        for(let i = args[1]; i < this.length; i++){
+            if(this[i] === args[0]){
+                return true;
+            }
+        }
+    }
+    return false;
 };
 
 // INDEXOF //
